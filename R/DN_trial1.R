@@ -1,4 +1,4 @@
-##' D319N transformed Sample 21
+##' D319N transformed Sample 1
 ##'
 ##' Protein predictions for the first D319N transformed sample. 
 ##'

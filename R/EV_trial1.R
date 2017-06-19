@@ -1,6 +1,6 @@
 ##' Empty Vector Sample 1
 ##'
-##' Protein predictions for the second empty vector sample.
+##' Protein predictions for the first empty vector sample.
 ##'
 ##' @name EV_trial1
 ##' @docType data

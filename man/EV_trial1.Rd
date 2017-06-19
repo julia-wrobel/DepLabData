@@ -5,7 +5,7 @@
 \alias{EV_trial1}
 \title{Empty Vector Sample 1}
 \description{
-Protein predictions for the second empty vector sample.
+Protein predictions for the first empty vector sample.
 }
 \references{
 Dephoure, N., and Cavaliere, P.

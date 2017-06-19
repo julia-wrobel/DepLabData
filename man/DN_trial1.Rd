@@ -3,7 +3,7 @@
 \docType{data}
 \name{DN_trial1}
 \alias{DN_trial1}
-\title{D319N transformed Sample 21}
+\title{D319N transformed Sample 1}
 \description{
 Protein predictions for the first D319N transformed sample.
 }
