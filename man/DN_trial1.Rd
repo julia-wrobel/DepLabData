@@ -8,7 +8,7 @@
 Protein predictions for the first D319N transformed sample.
 }
 \references{
-Dephoure, N., and Cavaliere, P.
+Dephoure, N. and Cavaliere, P.
 Weill Cornell Medical College
 }
 \keyword{datasets}
