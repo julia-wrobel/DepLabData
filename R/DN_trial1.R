@@ -1,6 +1,6 @@
 ##' D319N transformed Sample 21
 ##'
-##' Protein predictions for the first D319N transformed sample.
+##' Protein predictions for the first D319N transformed sample. 
 ##'
 ##' @name DN_trial1
 ##' @docType data
