@@ -12,3 +12,12 @@ To install the latest version directly from Github, please use:
 <pre><code>install.packages("devtools")
 devtools::install_github("julia-wrobel/DepLabData")
 </code></pre>
+
+
+
+### Help file
+
+To see what datasets are available in the package, please use:
+<pre><code>
+library(help = "DepLabData")
+</code></pre>
