@@ -151,7 +151,7 @@ help(DN_trial1,help_type = "text" )
 
 #### Raw MS data processed by MaxQuant is described by 7 variables. These variables along with definitions and relevant information are described below:
 
-## 1) Raw Intensity - The raw intensity variable refers to the raw number of a particular peptide detected in the mass spec
+## 1) Raw Intensity - This variable refers to the raw peak intensity of a particular peptide detected in the mass spec
 ## experiment. Raw intensity can not typically be used as direct measure of protein quantity, as there are a number of
 ## factors that influence how much of a particular peptide will be detected regardless of the amount of starting protein.
 ## This may vary significantly for different peptides in any given protein. 
