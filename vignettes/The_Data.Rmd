@@ -150,10 +150,8 @@ help(DN_trial1,help_type = "text" )
 ## 2. Data and Variable Description
 
 #### Raw MS data processed by MaxQuant is described by 7 variables. These variables along with definitions and relevant information are described below:
-##
-##
-## MQ Output Variables:
 
+#### MQ Output Variables:
 ## 1) Raw Intensity
 ## 2) LFQ (Label-free quantification)
 ## 3) MS Count
@@ -161,14 +159,16 @@ help(DN_trial1,help_type = "text" )
 ## 5) Unique Peptides Only
 ## 6) Razor and Unique Peptides
 ## 7) Sequence Coverage
+####
 
-#### Definitions:
 
-##### 1) Raw Intensity
+## Definitions:
 
-##### 2) LFQ (Label-free quantification)
+##### 1) Raw Intensity - The raw intensity variable refers to the raw number of a particular peptide detected in the mass spec experiment. Raw intensity can not typically be used as direct measure of protein quantity, as there are a number of factors that influence how much of a particular peptide will be detected regardless of the amount of starting protein. This may vary significantly for different peptides in any given protein. 
 
-##### 3) MS Count
+##### 2) LFQ (Label-free quantification) - MQ uses an algorithm to compute an estimate of total protein quantity (in the starting material) from the raw intensity counts (among other things?). This serves as a surrogate for experimental methods of protein quantification such as SILAC (stable isotope labeling by amino acids in culture). The LFQ value should provide a reasonably accurate estimate of the quantity of the given protein present in the sample. [here we need to look into if this algorithm is affected by differences in our experiments - dropping 0 values but we have 30 fractions to deal with] 
+
+##### 3) MS Count - 
 
 ##### 4) Peptides count
 
@@ -182,7 +182,6 @@ help(DN_trial1,help_type = "text" )
 ## are peptides present representing all amino acids in the known protein, while 50% would mean half of
 ## the knonw protein is covered, etc.
 
-
 ## Other:
 
 ## Notes on Contaminants
@@ -190,7 +189,7 @@ help(DN_trial1,help_type = "text" )
 ## Notes on Decoy peptides
 
 ## Contaminants : Common contaminants include keratin (from human hair, nails, hair) and proteins present in BSA (bovine serum albumin). Peptides identified from species other than the species that is the target of the experiment in question
-## indicate outside sources of contamination (for a human experiment, bacterial or mouse proteins may be some common contaminants) s
+## indicate outside sources of contamination (for a human experiment, bacterial or mouse proteins may be some common contaminants)
 
 
 
