@@ -126,7 +126,7 @@ dim(mq.in)
 
 ```
 
-#### A short description of the processed datasets are given by pulling up the help pages of the cleaned objects, For example,
+#### A short description of the processed datasets are given by pulling up the help pages of the cleaned objects, For example (you'll need to do this in the console/RStudio to view the help page),
 
 ```{r,echo=T,eval=T}
 
@@ -143,7 +143,7 @@ require(devtools)
 #install( "/Users/nickgiangreco/GitHub/DepLabData" )
 library(DepLabData)
 
-help(DN_trial1,help_type = "text" )
+?DN_trial1
 
 ```
 

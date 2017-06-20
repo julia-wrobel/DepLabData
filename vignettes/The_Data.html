@@ -11,7 +11,7 @@
 
 <meta name="author" content="NCBI Hackathon: Proteomic_Correlation_Shiny group" />
 
-<meta name="date" content="2017-06-19" />
+<meta name="date" content="2017-06-20" />
 
 <title>The Data</title>
 
@@ -119,7 +119,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">The Data</h1>
 <h4 class="author"><em>NCBI Hackathon: Proteomic_Correlation_Shiny group</em></h4>
-<h4 class="date"><em>2017-06-19</em></h4>
+<h4 class="date"><em>2017-06-20</em></h4>
 
 </div>
 
@@ -174,9 +174,126 @@ help(DN_trial1,help_type = &quot;text&quot; )</code></pre>
 </div>
 <div id="data-and-variable-description" class="section level2">
 <h2>2. Data and Variable Description</h2>
-<div id="maxquant-outputs-276-variables-for-each-mass-spectrometry-experiment.-these-arewe-included-in-our-objects" class="section level4">
-<h4>Maxquant outputs 276 variables for each mass spectrometry experiment. These are…We included in our objects…</h4>
+<div id="raw-ms-data-processed-by-maxquant-is-described-by-7-variables.-these-variables-along-with-definitions-and-relevant-information-are-described-below" class="section level4">
+<h4>Raw MS data processed by MaxQuant is described by 7 variables. These variables along with definitions and relevant information are described below:</h4>
 </div>
+</div>
+<div id="raw-intensity---this-variable-refers-to-the-raw-peak-intensity-of-a-particular-peptide-detected-in-the-mass-spec" class="section level2">
+<h2>1) Raw Intensity - This variable refers to the raw peak intensity of a particular peptide detected in the mass spec</h2>
+</div>
+<div id="experiment.-raw-intensity-can-not-typically-be-used-as-direct-measure-of-protein-quantity-as-there-are-a-number-of" class="section level2">
+<h2>experiment. Raw intensity can not typically be used as direct measure of protein quantity, as there are a number of</h2>
+</div>
+<div id="factors-that-influence-how-much-of-a-particular-peptide-will-be-detected-regardless-of-the-amount-of-starting-protein." class="section level2">
+<h2>factors that influence how much of a particular peptide will be detected regardless of the amount of starting protein.</h2>
+</div>
+<div id="this-may-vary-significantly-for-different-peptides-in-any-given-protein." class="section level2">
+<h2>This may vary significantly for different peptides in any given protein.</h2>
+</div>
+<div id="lfq-label-free-quantification---mq-uses-an-algorithm-to-compute-an-estimate-of-total-protein-quantity-in-the" class="section level2">
+<h2>2) LFQ (Label-free quantification) - MQ uses an algorithm to compute an estimate of total protein quantity (in the</h2>
+</div>
+<div id="starting-material-from-the-raw-intensity-counts-among-other-things.-this-serves-as-a-surrogate-for-experimental" class="section level2">
+<h2>starting material) from the raw intensity counts (among other things?). This serves as a surrogate for experimental</h2>
+</div>
+<div id="methods-of-protein-quantification-such-as-silac-stable-isotope-labeling-by-amino-acids-in-culture.-the-lfq-value-should" class="section level2">
+<h2>methods of protein quantification such as SILAC (stable isotope labeling by amino acids in culture). The LFQ value should</h2>
+</div>
+<div id="provide-a-reasonably-accurate-estimate-of-the-quantity-of-the-given-protein-present-in-the-sample.-here-we-need-to-look-into-if-this-algorithm-is-affected-by-differences-in-our-experiments---dropping-0-values-but-we-have-30-fractions-to-deal-with" class="section level2">
+<h2>provide a reasonably accurate estimate of the quantity of the given protein present in the sample. [here we need to look ## into if this algorithm is affected by differences in our experiments - dropping 0 values but we have 30 fractions to deal ## with]</h2>
+</div>
+<div id="ms-count---the-number-of-ms-spectra-generated-still-unclear---per-peptide-or-in-total" class="section level2">
+<h2>3) MS Count - The number of MS spectra generated (still unclear - per peptide or in total?)</h2>
+</div>
+<div id="peptides-count---the-total-number-of-peptides-detected-in-the-experiment." class="section level2">
+<h2>4) Peptides count - The total number of peptides detected in the experiment.</h2>
+</div>
+<div id="unique-peptides-only---unique-peptides-in-the-analysis-of-ms-spectra-are-those-that-have-been-assigned-to-only-a" class="section level2">
+<h2>5) Unique Peptides only - Unique peptides in the analysis of MS spectra are those that have been assigned to only a</h2>
+</div>
+<div id="single-protein-group." class="section level2">
+<h2>single protein group.</h2>
+</div>
+<div id="razor-and-unique-peptides---in-the-analysis-of-ms-spectra-a-razor-peptide-is-the-peptide-with-the-greatest" class="section level2">
+<h2>6) Razor and Unique Peptides - In the analysis of MS spectra, a “razor” peptide is the peptide with the greatest</h2>
+</div>
+<div id="abundance-in-a-particular-identified-protein-group.-unique-peptides-refers-to-peptides-that-have-been-assigned-to-only" class="section level2">
+<h2>abundance in a particular identified protein group. “Unique” peptides refers to peptides that have been assigned to only</h2>
+</div>
+<div id="a-single-protein-group.-therefore-a-razor-and-unique-peptide-is-one-in-which-it-is-both-the-most-abundant-in-its-given" class="section level2">
+<h2>a single protein group. Therefore, a “Razor and Unique Peptide” is one in which it is both the most abundant in its given</h2>
+</div>
+<div id="protein-group-and-is-not-assigned-to-any-other-protein-groups." class="section level2">
+<h2>protein group and is not assigned to any other protein groups.</h2>
+</div>
+<div id="sequence-coverage-this-variable-refers-to-the-percentage-of-total-amino-acids-in-a" class="section level2">
+<h2>7) Sequence Coverage This variable refers to the percentage of total amino acids in a</h2>
+</div>
+<div id="known-protein-that-are-present-in-the-form-of-peptides-identified-in-a-particular-ms-experiment" class="section level2">
+<h2>known protein that are present in the form of peptides identified in a particular MS experiment</h2>
+</div>
+<div id="for-which-that-known-protein-has-been-determined-to-be-present.-100-coverage-would-denote-that-there" class="section level2">
+<h2>for which that known protein has been determined to be present. 100% coverage would denote that there</h2>
+</div>
+<div id="are-peptides-present-representing-all-amino-acids-in-the-known-protein-while-50-would-mean-half-of" class="section level2">
+<h2>are peptides present representing all amino acids in the known protein, while 50% would mean half of</h2>
+</div>
+<div id="the-knonw-protein-is-covered-etc." class="section level2">
+<h2>the knonw protein is covered, etc.</h2>
+</div>
+<div id="other" class="section level2">
+<h2>Other:</h2>
+</div>
+<div id="notes-on-spike-ins-spike-ins-are-a-form-of-a-positive-control-in-ms-experiments-that-allow-you-to-validate-that" class="section level2">
+<h2>Notes on Spike-ins : Spike-ins are a form of a positive control in MS experiments that allow you to validate that</h2>
+</div>
+<div id="the-spectrometer-is-functioning-properly.-a-small-amount-of-a-known-protein-typically-this-is-pig-trypsin-is-added" class="section level2">
+<h2>the spectrometer is functioning properly. A small amount of a known protein (typically this is pig trypsin) is added</h2>
+</div>
+<div id="to-the-experimental-sample-before-the-ms-analysis.-we-then-look-for-the-expected-spectra-for-the-spike-in-protein-to" class="section level2">
+<h2>to the experimental sample before the MS analysis. We then look for the expected spectra for the spike-in protein to</h2>
+</div>
+<div id="show-up-in-the-processed-data-of-the-experiment.-abnormalities-in-the-resulting-spectra-matched-to-the-spike-in-may" class="section level2">
+<h2>show up in the processed data of the experiment. Abnormalities in the resulting spectra matched to the spike-in may</h2>
+</div>
+<div id="be-indicative-that-the-spectrometer-is-not-functioning-properly." class="section level2">
+<h2>be indicative that the spectrometer is not functioning properly.</h2>
+</div>
+<div id="contaminants-common-contaminants-include-keratin-from-human-hair-nails-hair-and-proteins-present-in-bsa-bovine" class="section level2">
+<h2>Contaminants : Common contaminants include keratin (from human hair, nails, hair) and proteins present in BSA (bovine</h2>
+</div>
+<div id="serum-albumin.-peptides-identified-from-species-other-than-the-species-that-is-the-target-of-the-experiment-in-question" class="section level2">
+<h2>serum albumin). Peptides identified from species other than the species that is the target of the experiment in question</h2>
+</div>
+<div id="indicate-outside-sources-of-contamination-for-a-human-experiment-bacterial-or-mouse-proteins-may-be-some-common" class="section level2">
+<h2>indicate outside sources of contamination (for a human experiment, bacterial or mouse proteins may be some common</h2>
+</div>
+<div id="contaminants.-contaminant-peptides-are-automatically-identified-by-maxquant." class="section level2">
+<h2>contaminants). Contaminant peptides are automatically identified by MaxQuant.</h2>
+</div>
+<div id="decoy-peptides-ms-experiments-involving-the-analysis-and-identification-of-large-number-of-input-proteins-in-a-single" class="section level2">
+<h2>Decoy peptides : MS experiments involving the analysis and identification of large number of input proteins in a single</h2>
+</div>
+<div id="experiment-which-may-be-several-thousand-are-faced-with-an-issue-of-resolving-correctly-interpreted-spectra-from-false-positives-in-which-a-peptide-or-protein-is-incorrectly-inferred-false-discovery-rate.-a-strategy-known-as-the" class="section level2">
+<h2>experiment (which may be several thousand) are faced with an issue of resolving correctly interpreted spectra from ‘false ## positives’ in which a peptide or protein is incorrectly inferred (false discovery rate). A strategy known as the</h2>
+</div>
+<div id="target-decoy-method-for-the-estimation-of-this-error-rate-in-large-scale-ms-experiments-works-by-including-manufactured" class="section level2">
+<h2>target-decoy method for the estimation of this error rate in large-scale MS experiments works by including manufactured</h2>
+</div>
+<div id="protein-sequences-in-the-database-search-space-that-do-not-exist-in-nature.-decoy-sequences-are-considered-alongside-real" class="section level2">
+<h2>protein sequences in the database search space that do not exist in nature. Decoy sequences are considered alongside real</h2>
+</div>
+<div id="sequences-derived-from-the-species-of-interest-while-analyzing-the-ms-spectra-and-will-be-matched-at-some" class="section level2">
+<h2>sequences derived from the species of interest while analyzing the MS spectra, and will be ‘matched’ at some</h2>
+</div>
+<div id="non-zero-rate.-the-rate-and-specifics-of-matched-decoy-sequences-then-can-be-used-to-estimate-error-rates-and-also-to" class="section level2">
+<h2>non-zero rate. The rate and specifics of matched decoy sequences then can be used to estimate error rates and also to</h2>
+</div>
+<div id="refine-the-search-parameters-for-better-sensitivity-and-more-accurate-hits.-decoy-peptides-are-typically-generated-as" class="section level2">
+<h2>refine the search parameters for better sensitivity and more accurate hits. Decoy peptides are typically generated as</h2>
+</div>
+<div id="reverse-sequences-from-the-organism-of-interest." class="section level2">
+<h2>reverse sequences from the organism of interest.</h2>
 </div>
 
 
