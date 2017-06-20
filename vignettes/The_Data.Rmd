@@ -149,8 +149,9 @@ help(DN_trial1,help_type = "text" )
 
 ## 2. Data and Variable Description
 
-#### Maxquant outputs 276 variables for each mass spectrometry experiment. These are...We included in our objects...
-
+#### Raw MS data processed by MaxQuant is described by 7 variables. These variables along with definitions and relevant information are described below:
+##
+##
 ## MQ Output Variables:
 
 ## 1) Raw Intensity
@@ -161,19 +162,35 @@ help(DN_trial1,help_type = "text" )
 ## 6) Razor and Unique Peptides
 ## 7) Sequence Coverage
 
+#### Definitions:
+
+##### 1) Raw Intensity
+
+##### 2) LFQ (Label-free quantification)
+
+##### 3) MS Count
+
+##### 4) Peptides count
+
+##### 5) Unique Peptides only
+
+##### 6) Razor and Unique Peptides
+
+##### 7) Sequence Coverage This variable refers to the percentage of total amino acids in a 
+## known protein that are present in the form of peptides identified in a particular MS experiment
+## for which that known protein has been determined to be present. 100% coverage would denote that there
+## are peptides present representing all amino acids in the known protein, while 50% would mean half of
+## the knonw protein is covered, etc.
+
+
 ## Other:
 
 ## Notes on Contaminants
 ## Notes on Spike-ins
 ## Notes on Decoy peptides
 
-## Descriptions: 
-
-## 6) Razor and Unique Peptides - 
-
-## 7) Sequence Coverage - This variable refers to the percentage of total amino acids in a known protein that are present in the form of peptides identified in a particular MS experiment for which that known protein has been determined to be present. 100% coverage would denote that there are peptides present representing all amino acids in the known protein, while 50% would mean half of the knonw protein is covered, etc. 
-
-
+## Contaminants : Common contaminants include keratin (from human hair, nails, hair) and proteins present in BSA (bovine serum albumin). Peptides identified from species other than the species that is the target of the experiment in question
+## indicate outside sources of contamination (for a human experiment, bacterial or mouse proteins may be some common contaminants) s
 
 
 
