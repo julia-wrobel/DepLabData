@@ -149,4 +149,55 @@ help(DN_trial1,help_type = "text" )
 
 ## 2. Data and Variable Description
 
-#### Maxquant outputs 276 variables for each mass spectrometry experiment. These are...We included in our objects...
+#### Raw MS data processed by MaxQuant is described by 7 variables. These variables along with definitions and relevant information are described below:
+
+## 1) Raw Intensity - This variable refers to the raw peak intensity of a particular peptide detected in the mass spec
+## experiment. Raw intensity can not typically be used as direct measure of protein quantity, as there are a number of
+## factors that influence how much of a particular peptide will be detected regardless of the amount of starting protein.
+## This may vary significantly for different peptides in any given protein. 
+
+## 2) LFQ (Label-free quantification) - MQ uses an algorithm to compute an estimate of total protein quantity (in the
+## starting material) from the raw intensity counts (among other things?). This serves as a surrogate for experimental
+## methods of protein quantification such as SILAC (stable isotope labeling by amino acids in culture). The LFQ value should
+## provide a reasonably accurate estimate of the quantity of the given protein present in the sample. [here we need to look 
+## into if this algorithm is affected by differences in our experiments - dropping 0 values but we have 30 fractions to deal ## with] 
+
+## 3) MS Count - The number of MS spectra generated (still unclear - per peptide or in total?)
+
+## 4) Peptides count - The total number of peptides detected in the experiment.
+
+## 5) Unique Peptides only - Unique peptides in the analysis of MS spectra are those that have been assigned to only a 
+## single protein group. 
+
+## 6) Razor and Unique Peptides - In the analysis of MS spectra, a "razor" peptide is the peptide with the greatest 
+## abundance in a particular identified protein group. "Unique" peptides refers to peptides that have been assigned to only 
+## a single protein group. Therefore, a "Razor and Unique Peptide" is one in which it is both the most abundant in its given 
+## protein group and is not assigned to any other protein groups. 
+
+## 7) Sequence Coverage This variable refers to the percentage of total amino acids in a 
+## known protein that are present in the form of peptides identified in a particular MS experiment
+## for which that known protein has been determined to be present. 100% coverage would denote that there
+## are peptides present representing all amino acids in the known protein, while 50% would mean half of
+## the knonw protein is covered, etc.
+
+## Other:
+
+## Notes on Spike-ins : Spike-ins are a form of a positive control in MS experiments that allow you to validate that
+## the spectrometer is functioning properly. A small amount of a known protein (typically this is pig trypsin) is added
+## to the experimental sample before the MS analysis. We then look for the expected spectra for the spike-in protein to
+## show up in the processed data of the experiment. Abnormalities in the resulting spectra matched to the spike-in may 
+## be indicative that the spectrometer is not functioning properly.
+
+## Contaminants : Common contaminants include keratin (from human hair, nails, hair) and proteins present in BSA (bovine
+## serum albumin). Peptides identified from species other than the species that is the target of the experiment in question
+## indicate outside sources of contamination (for a human experiment, bacterial or mouse proteins may be some common 
+## contaminants). Contaminant peptides are automatically identified by MaxQuant.
+
+## Decoy peptides : MS experiments involving the analysis and identification of large number of input proteins in a single
+## experiment (which may be several thousand) are faced with an issue of resolving correctly interpreted spectra from 'false ## positives' in which a peptide or protein is incorrectly inferred (false discovery rate). A strategy known as the 
+## target-decoy method for the estimation of this error rate in large-scale MS experiments works by including manufactured
+## protein sequences in the database search space that do not exist in nature. Decoy sequences are considered alongside real
+## sequences derived from the species of interest while analyzing the MS spectra, and will be 'matched' at some 
+## non-zero rate. The rate and specifics of matched decoy sequences then can be used to estimate error rates and also to 
+## refine the search parameters for better sensitivity and more accurate hits. Decoy peptides are typically generated as 
+## reverse sequences from the organism  of interest. 
