@@ -150,3 +150,31 @@ help(DN_trial1,help_type = "text" )
 ## 2. Data and Variable Description
 
 #### Maxquant outputs 276 variables for each mass spectrometry experiment. These are...We included in our objects...
+
+## MQ Output Variables:
+
+## 1) Raw Intensity
+## 2) LFQ (Label-free quantification)
+## 3) MS Count
+## 4) Peptides count
+## 5) Unique Peptides Only
+## 6) Razor and Unique Peptides
+## 7) Sequence Coverage
+
+## Other:
+
+## Notes on Contaminants
+## Notes on Spike-ins
+## Notes on Decoy peptides
+
+## Descriptions: 
+
+## 6) Razor and Unique Peptides - 
+
+## 7) Sequence Coverage - This variable refers to the percentage of total amino acids in a known protein that are present in the form of peptides identified in a particular MS experiment for which that known protein has been determined to be present. 100% coverage would denote that there are peptides present representing all amino acids in the known protein, while 50% would mean half of the knonw protein is covered, etc. 
+
+
+
+
+
+
