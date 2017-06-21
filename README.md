@@ -14,7 +14,6 @@ devtools::install_github("julia-wrobel/DepLabData")
 </code></pre>
 
 
-
 ### Help file
 
 To see what datasets are available in the package, please use:
@@ -24,7 +23,16 @@ library(help = "DepLabData")
 
 ### Go from wide to long format
 
+For this functionality, please install the `DepLab` package:
+
+```{r}
+devtools::install_github("NCBI-Hackathons/Proteomic_Correlation_Shiny", subdir = "DepLab")
 ```
+
+To convert from wide to long format:
+
+```
+library(DepLab)
 # load the data in wide format --> every row corresponds to one protein, but the columns contain
 # values for at least 7 variables (x 30 fractions)
 data(WT_trial1)
